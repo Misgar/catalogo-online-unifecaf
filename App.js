@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './src/screens/LoginScreen';
+import ProductListScreen from './src/screens/ProductListScreen';
+import ProductDetailScreen from './src/screens/ProductDetailScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [user, setUser] = useState(null); // null = não logado
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        {!user ? (
+          <Stack.Screen name="Login">
+            {(props) => <LoginScreen {...props} setUser={setUser} />}
+          </Stack.Screen>
+        ) : (
+          <>
+            <Stack.Screen name="Produtos">
+              {(props) => <ProductListScreen {...props} setUser={setUser} />}
+            </Stack.Screen>
+            <Stack.Screen name="Detalhes" component={ProductDetailScreen} />
+          </>
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
