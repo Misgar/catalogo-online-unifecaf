@@ -1,30 +1,16 @@
 {
-  "name": "catalogo-online-unifecaf",
-  "license": "0BSD",
+  "name": "catalogo-mobile",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "expo-router/entry",
+  "private": true,
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-navigation/bottom-tabs": "^7.4.6",
-    "@react-navigation/native": "^7.1.17",
-    "@react-navigation/native-stack": "^7.3.25",
-    "@reduxjs/toolkit": "^2.8.2",
-    "axios": "^1.11.0",
-    "expo": "~53.0.20",
-    "expo-status-bar": "~2.2.3",
-    "react": "19.0.0",
-    "react-native": "0.79.5",
-    "react-native-safe-area-context": "^5.6.0",
-    "react-native-screens": "^4.13.1",
-    "react-redux": "^9.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+    "expo-router": "^3.0.0",
+    "axios": "^1.7.2"
+  }
 }
