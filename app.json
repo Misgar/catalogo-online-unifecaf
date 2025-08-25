@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Catalogo",
-    "slug": "catalogo",
-    "scheme": "catalogo",
-    "ios": { "supportsTablet": true },
-    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png" } },
-    "plugins": ["expo-router"],
-    "experiments": { "typedRoutes": true }
+    "name": "catalogo-mobile-unifecaf",
+    "slug": "catalogo-mobile-unifecaf",
+    "version": "1.0.0",
+    "sdkVersion": "50.0.0",
+    "ios": {
+      "bundleIdentifier": "app"
+    }
   }
 }

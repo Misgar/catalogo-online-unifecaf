@@ -1,16 +1,25 @@
 {
-  "name": "catalogo-mobile",
+  "name": "catalogo-mobile-unifecaf",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "private": true,
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo-router": "^3.0.0",
-    "axios": "^1.7.2"
+    "expo": "~50.0.20",
+    "expo-router": "~3.4.10",
+    "expo-status-bar": "~1.11.1",
+    "react": "18.2.0",
+    "react-native": "^0.73.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.45",
+    "@types/react-native": "^0.72.8",
+    "typescript": "^5.3.0"
   }
 }
